@@ -73,7 +73,7 @@ public func future<T, E>(context c: ExecutionContext, task: () -> Result<T, E>) 
 public final class Future<T, E: ErrorType>: Async<Result<T, E>> {
     
     typealias CompletionCallback = (result: Result<T,E>) -> Void
-    typealias SuccessCallback = T -> Void
+    public typealias SuccessCallback = T -> Void
     public typealias FailureCallback = E -> Void
     
     public required init() {
